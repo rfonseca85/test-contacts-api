@@ -1,0 +1,11 @@
+server:
+  port: 9090
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+api:
+  key: 12c34b63-da04-453c-8a16-4ac1057f0327
