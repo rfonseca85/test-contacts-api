@@ -5,7 +5,9 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: "health"
 
-api:
-  key: 12c34b63-da04-453c-8a16-4ac1057f0327
+springdoc:
+  swagger-ui:
+    path=: "/jahia-contacts-api-swagger.html"
+#"http://localhost:9090/jahia-contacts-api-swagger.html"

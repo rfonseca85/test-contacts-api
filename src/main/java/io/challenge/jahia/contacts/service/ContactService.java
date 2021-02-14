@@ -6,16 +6,16 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ContactService {
-    public List<Contact> getContacts();
+  public List<Contact> getContacts();
 
-    public Contact getContact(long id);
+  public Contact getContact(long id);
 
-    public List<Contact> findContactByFullName(String fullName);
+  public List<Contact> findContactByFullName(String fullName);
 
-    public Contact createContact(Contact contact);
+  public Contact createContact(Contact contact);
 
-    public Contact updateContact(long id, Contact contact);
+  public Contact updateContact(long id, Contact contact);
 
-    public Contact deleteContact(long id);
+  public Contact deleteContact(long id);
 
 }
