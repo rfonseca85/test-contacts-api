@@ -16,3 +16,5 @@ WORKDIR /home/jahia-contacts-api
 RUN ./gradlew clean test assemble
 WORKDIR /home/jahia-contacts-api/build/libs
 ENTRYPOINT ["java","-jar","jahia-contacts-api-0.0.1-SNAPSHOT.jar"]
+
+#
