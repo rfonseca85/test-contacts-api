@@ -20,6 +20,13 @@ dependencies {
 	implementation 'org.jetbrains:annotations:20.1.0'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	compileOnly 'org.projectlombok:lombok:1.18.16'
+	annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+	testCompileOnly 'org.projectlombok:lombok:1.18.16'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+
 }
 
 test {

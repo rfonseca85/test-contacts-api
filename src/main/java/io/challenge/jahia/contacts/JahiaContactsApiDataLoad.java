@@ -13,20 +13,20 @@ import java.util.List;
 @Component
 public class JahiaContactsApiDataLoad {
 
-  @Autowired
-  ContactService contactService;
+    @Autowired
+    ContactService contactService;
 
-  @Bean
-  CommandLineRunner loadingInitialData() {
+    @Bean
+    CommandLineRunner loadingInitialData() {
 
-    List<Contact> contactList = new ArrayList<>();
-    contactList.add(new Contact("Dennis Ritchie", "c@planguage.com", "12333123312", "just C"));
-    contactList.add(new Contact("Martin Fowler", "mfowler@gmail.com", "3219632054", "Books and more books"));
-    contactList.add(new Contact("Mark Zuckerberg", "zuzuck@facebook.com", "932932932", "No Privacy"));
-    contactList.add(new Contact("Rafael Fonseca", "rfonseca85@yahoo.ca", "6479632054", "Tech Lead"));
-    contactList.add(new Contact("Linus Torvalds", "linux-my-life@yahoo.ca", "3219632054", "Better than windows"));
-    contactList.add(new Contact("Larry Page", "larryForFun@google.com", "123123", "Google it"));
+        List<Contact> contactList = List.of(
+                Contact.builder().fullName("Dennis Ritchie").email("c@planguage.com").mobile("12333123312").description("just C").build(),
+                Contact.builder().fullName("Mark Zuckerberg").email("zuzuck@facebook.com").mobile("932932932").description("No Privacy").build(),
+                Contact.builder().fullName("Rafael Fonseca").email("rfonseca85@yahoo.ca").mobile("6479632054").description("Tech Lead").build(),
+                Contact.builder().fullName("Linus Torvalds").email("linux-my-life@yahoo.ca").mobile("3219632054").description("Better than windows").build(),
+                Contact.builder().fullName("Larry Page").email("larryForFun@google.com").mobile("123123").description("Google it").build()
+        );
 
-    return args -> contactList.forEach(contact -> contactService.createContact(contact));
-  }
+        return args -> contactList.forEach(contact -> contactService.createContact(contact));
+    }
 }
