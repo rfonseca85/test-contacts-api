@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+//Adding Lombok
+
 @Component
 public class JahiaContactsApiDataLoad {
 
