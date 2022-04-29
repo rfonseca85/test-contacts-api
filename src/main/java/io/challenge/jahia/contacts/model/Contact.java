@@ -15,11 +15,13 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+//Esse codigo eh legal
 public class Contact {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
+  //Esse full name eh bom.
   private String fullName;
   private String email;
   private String mobile;
