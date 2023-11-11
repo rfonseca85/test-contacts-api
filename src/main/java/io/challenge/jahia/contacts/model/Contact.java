@@ -15,7 +15,8 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-//Esse codigo eh legal
+
+//Esse codigo eh bem legal
 public class Contact {
 
   @Id
